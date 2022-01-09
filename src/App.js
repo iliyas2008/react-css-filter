@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Gallary from './componentes/gallary/Gallary';
+import Gallary from './componentes/gallery/Gallery';
 import Display from './componentes/main-div/Display';
 import './App.css';
 

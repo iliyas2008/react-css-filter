@@ -30,7 +30,7 @@ export default function SearchImg(props){
     return(
         <>
         <div className={styles.searchDiv}>
-            <input style={{padding:".8em", fontSize:"1rem", borderRadius:"3px", outline:"none", border:"none"}} type="text" value={searchVal} onChange={handleSearchVal} onKeyPress={handleEnterKey} />
+            <input style={{padding:".8em", fontSize:"1rem", borderRadius:"3px", outline:"none", border:"none"}} type="text" value={searchVal} onChange={handleSearchVal} onKeyPress={handleEnterKey} placeholder="Enter a keyword ..." />
             <button style={{margin:".5rem", padding:".8em", background:"blue", color:"white", border:"none", fontSize:"1rem"}} onClick={handleClick}>Search</button>
         </div>
         </>

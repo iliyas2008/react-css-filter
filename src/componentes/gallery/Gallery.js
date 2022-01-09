@@ -3,7 +3,7 @@ import axios from 'axios';
 import Thumbnails from "../img-tiles/Thumbnails";
 import SearchImg from "../search-div/SearchImg";
 
-export default function Gallary(){
+export default function Gallery(){
 
     const [photos, setPhotos] = useState([]);
     const [searchTerm, setSearchTerm] = useState("italy")
@@ -23,7 +23,8 @@ export default function Gallary(){
     }
     return(
     <>
-        <h1>Gallary</h1>
+        <h1>Gallery</h1>
+        <p>Search random images online... </p>
         <SearchImg searchData={{setSearchTerm:handleSearchTerm}} />
         <Thumbnails photosData={photos} />
     </>
