@@ -8,8 +8,13 @@
 
     width: 20rem;
     height: 15rem;
+    max-width: 100%;
     border-radius: .5rem .5rem 0rem 0rem;
+    transition: 0.5s all ease-in-out;
 }
+.imgView:hover {
+    transform: scale(1.5);
+  }
 .srcTxt{
     display: inline-block;
     font-size: 1rem;
@@ -35,4 +40,14 @@
   
   .slider:hover {
     opacity: 1;
+  }
+  .thumbnail{
+    padding: .2rem;
+    margin: .2rem;
+    border: 1px solid lightsteelblue;
+  }
+  .searchDiv{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
   }

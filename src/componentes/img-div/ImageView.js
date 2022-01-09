@@ -11,7 +11,10 @@ export default function ImageView(props){
         setImgSrc(e.target.value)
     }
 
-    const {grayValue, brightValue, bright} = props.controlData
+    const {recImgData, grayValue, brightValue, bright} = props.controlData
+    // console.log(recImgData.myProps.previewURL);
+    const recImg = recImgData.myProps.largeImageURL
+    
     const grayness = {
         filter:`grayscale(${grayValue}%)`
     }
@@ -22,11 +25,11 @@ export default function ImageView(props){
         <>
         <img className={styles.imgView} 
             style={bright? brightness : grayness} 
-            src={imgSrc === "" ? defaultUrl : imgSrc} 
+            src={imgSrc === "" ? recImg === "" ? defaultUrl : recImg : imgSrc} 
             alt="input graphics"/>
         <div>
-        <label htmlFor="img-src"  className={styles.srcTxt} >Image Src</label>
-        <input type="text" id="img-src" name="img-src" onChange={handleImgSrc}/>
+        <label style={recImg !== "" ? {display:"none"} : {display:"block"}} htmlFor="img-src"  className={styles.srcTxt} >Image Src</label>
+        <input style={recImg !== "" ? {display:"none"} : {display:"block"}}  type="text" id="img-src" name="img-src" onChange={handleImgSrc}/>
         </div>
         </>
     )

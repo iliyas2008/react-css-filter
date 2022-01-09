@@ -4,7 +4,7 @@ export default function Grayscale(props){
     const [grayValue, setGrayValue] = useState("");
 
     const handleGrayscale = (e)=>{
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setGrayValue(e.target.value)
         props.getGrayValue(grayValue, false)
     }
